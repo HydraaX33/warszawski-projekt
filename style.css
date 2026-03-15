@@ -65,3 +65,48 @@ nav ul li a:hover { color: var(--primary); }
     margin: 0 30px;
     text-align: center;
 }
+
+.content-section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.darker {
+    background-color: #151515;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.rule-box {
+    background: #222;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary);
+    text-align: left;
+    border-radius: 5px;
+}
+
+.rule-box h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    background: #0a0a0a;
+    font-size: 0.9rem;
+    color: #555;
+}
