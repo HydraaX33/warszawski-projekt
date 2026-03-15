@@ -3,64 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warszawski Projekt | Roleplay</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Warszawski Projekt | Elite Roleplay</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Syncopate:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">WARSZAWSKI<span>PROJEKT</span></div>
-        <ul>
-            <li><a href="#home">Start</a></li>
-            <li><a href="#about">O nas</a></li>
-            <li><a href="#rules">Regulamin</a></li>
-            <li><a href="https://discord.gg/twojlink" class="btn-discord">Discord</a></li>
-        </ul>
+    <div class="overlay"></div>
+    
+    <nav class="glass-nav">
+        <div class="logo">WP<span>RP</span></div>
+        <div class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#about">PROJEKT</a>
+            <a href="#rules">ZASADY</a>
+            <a href="https://discord.gg/twojlink" class="nav-btn">DISCORD</a>
+        </div>
     </nav>
 
-    <header id="home" class="hero">
-        <div class="hero-inner" data-aos="zoom-in" data-aos-duration="1500">
-            <h1 class="glitch">WARSZAWA</h1>
-            <p>TWOJA HISTORIA ZACZYNA SIĘ TUTAJ</p>
-            <div class="hero-btns">
-                <a href="fivem://connect/IP" class="btn-play">GRAJ TERAZ</a>
-                <a href="#about" class="btn-more">POZNAJ PROJEKT</a>
+    <main id="home">
+        <section class="hero-v2">
+            <div class="hero-content">
+                <h2 class="top-text">WITAMY W STOLICY</h2>
+                <h1 class="main-title">WARSZAWSKI<br><span class="accent">PROJEKT</span></h1>
+                <p class="hero-p">Najwyższy standard Roleplay w Polsce. Autorskie systemy, stabilna ekonomia i społeczność tworząca historię.</p>
+                <div class="cta-group">
+                    <a href="fivem://connect/IP" class="cta-primary">DOŁĄCZ DO GRY</a>
+                    <a href="#about" class="cta-secondary">POZNAJ NAS</a>
+                </div>
             </div>
-        </div>
-    </header>
+        </section>
+    </main>
 
-    <section id="about" class="section-padding">
-        <div class="container" data-aos="fade-up">
-            <span class="prefix">O SERWERZE</span>
-            <h2>DLACZEGO WARSZAWSKI PROJEKT?</h2>
-            <p class="description">Jesteśmy pasjonatami, którzy przenieśli klimat polskiej stolicy do świata FiveM. U nas nie jesteś tylko ID – jesteś częścią żyjącego miasta.</p>
+    <section id="about" class="info-grid">
+        <div class="info-card" data-index="01">
+            <h3>EKONOMIA</h3>
+            <p>Zbalansowany system zarobków, który nagradza kreatywność, a nie grind.</p>
+        </div>
+        <div class="info-card" data-index="02">
+            <h3>FRAKCJE</h3>
+            <p>Profesjonalne szkolenia dla LSPD, EMS i LSC. Polska flota pojazdów.</p>
+        </div>
+        <div class="info-card" data-index="03">
+            <h3>SKRYPTY</h3>
+            <p>Zoptymalizowane systemy zapewniające najwyższą płynność (60+ FPS).</p>
         </div>
     </section>
 
-    <section id="rules" class="section-padding darker">
+    <section id="rules" class="rules-section">
         <div class="container">
-            <span class="prefix" data-aos="fade-right">ZASADY</span>
-            <h2 data-aos="fade-right">REGULAMIN</h2>
-            <div class="rules-grid">
-                <div class="rule-card" data-aos="flip-left" data-aos-delay="100">
-                    <h3>01</h3>
-                    <p>Szanuj życie swojej postaci ponad wszystko.</p>
+            <h2 class="section-title">KODEKS MIASTA</h2>
+            <div class="rule-line">
+                <span class="num">01</span>
+                <div class="rule-txt">
+                    <h4>IMMERSJA</h4>
+                    <p>Wymagamy odgrywania postaci zgodnie z jej charakterem i otoczeniem.</p>
                 </div>
-                <div class="rule-card" data-aos="flip-left" data-aos-delay="300">
-                    <h3>02</h3>
-                    <p>Zakaz korzystania z informacji OOC w grze.</p>
-                </div>
-                <div class="rule-card" data-aos="flip-left" data-aos-delay="500">
-                    <h3>03</h3>
-                    <p>Wymagany sprawny mikrofon i kultura osobista.</p>
+            </div>
+            <div class="rule-line">
+                <span class="num">02</span>
+                <div class="rule-txt">
+                    <h4>WYMAGANIA</h4>
+                    <p>Minimum 16 lat, sprawny mikrofon i brak mutacji/pisków.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
