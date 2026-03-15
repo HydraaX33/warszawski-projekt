@@ -1,140 +1,90 @@
 :root {
-    --primary: #ff003c;
-    --accent: #ff4d00;
-    --dark: #050505;
-    --glass: rgba(255, 255, 255, 0.03);
+    --primary: #ff1e1e;
+    --bg: #030303;
+    --card: #0a0a0a;
+    --border: rgba(255, 255, 255, 0.05);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { 
-    background: var(--dark); 
+    background-color: var(--bg); 
     color: #fff; 
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+    font-family: 'Rajdhani', sans-serif; 
+    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
-/* TŁO HERO */
-.hero-v2 {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
-    background: linear-gradient(90deg, #050505 20%, transparent 100%), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2000'); /* Zdjęcie nocy / miasta */
-    background-size: cover;
-    background-position: center;
+.bg-glow {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(255, 30, 30, 0.05), transparent 40%);
+    z-index: -1;
 }
 
-.main-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(3rem, 8vw, 6rem);
-    line-height: 0.9;
-    letter-spacing: -2px;
-    margin: 20px 0;
+/* NAVIGATION */
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 25px 8%; background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px); position: fixed; width: 100%; z-index: 1000;
 }
 
-.accent {
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
-    opacity: 0.7;
-}
-
-.top-text {
-    font-family: 'Syncopate', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 10px;
-    color: var(--primary);
-}
-
-/* NAWIGACJA */
-.glass-nav {
-    position: fixed;
-    top: 0; width: 100%;
-    padding: 30px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-.logo { font-family: 'Syncopate'; font-size: 1.5rem; letter-spacing: 2px; }
+.logo { font-family: 'Orbitron'; font-weight: 900; font-size: 1.5rem; letter-spacing: 3px; }
 .logo span { color: var(--primary); }
 
-.nav-links a {
-    text-decoration: none;
-    color: #aaa;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-left: 40px;
-    transition: 0.4s;
+.links a { 
+    text-decoration: none; color: #888; margin-left: 30px; 
+    font-weight: 700; font-size: 0.8rem; transition: 0.3s; letter-spacing: 2px;
+}
+.links a:hover { color: #fff; text-shadow: 0 0 10px #fff; }
+
+.discord-btn { border: 1px solid var(--primary); padding: 8px 20px; color: #fff !important; }
+
+/* HERO */
+.hero {
+    height: 100vh; display: flex; align-items: center; padding: 0 8%;
+    background: linear-gradient(to right, #030303 30%, transparent), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2000');
+    background-size: cover; background-position: center;
 }
 
-.nav-links a:hover { color: #fff; }
+.badge { color: var(--primary); font-size: 0.9rem; letter-spacing: 5px; margin-bottom: 10px; }
 
-.nav-btn {
-    padding: 10px 25px;
-    border: 1px solid var(--primary);
-    color: #fff !important;
+h1 { font-family: 'Orbitron'; font-size: clamp(3rem, 8vw, 6rem); line-height: 0.85; margin-bottom: 20px; }
+.outline { color: transparent; -webkit-text-stroke: 1.5px #fff; }
+
+.btn-main {
+    display: inline-block; background: var(--primary); color: #fff; 
+    text-decoration: none; padding: 18px 40px; font-weight: 900;
+    letter-spacing: 2px; box-shadow: 0 10px 30px rgba(255, 30, 30, 0.3); transition: 0.3s;
+}
+.btn-main:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(255, 30, 30, 0.5); }
+
+/* BENTO GRID */
+.grid-container {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 100px 8%;
 }
 
-/* CARDS */
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: rgba(255,255,255,0.1);
-    border-top: 1px solid rgba(255,255,255,0.1);
+.bento-item {
+    background: var(--card); border: 1px solid var(--border); padding: 50px;
+    display: flex; flex-direction: column; justify-content: center; transition: 0.3s;
 }
 
-.info-card {
-    background: var(--dark);
-    padding: 80px 40px;
-    position: relative;
-    transition: 0.5s;
-}
+.bento-item.big { grid-column: span 2; }
+.bento-item:hover { border-color: var(--primary); background: #0d0d0d; }
 
-.info-card::before {
-    content: attr(data-index);
-    position: absolute;
-    top: 20px; right: 20px;
-    font-family: 'Syncopate';
-    color: var(--primary);
-    font-size: 0.8rem;
-}
+.stat { font-family: 'Orbitron'; font-size: 3rem; color: var(--primary); margin-bottom: 10px; }
 
-.info-card:hover { background: #0a0a0a; }
-.info-card h3 { font-family: 'Syncopate'; margin-bottom: 20px; font-size: 1.2rem; }
+/* RULES */
+.rules-section { padding: 100px 8%; }
+.section-header h2 { font-family: 'Orbitron'; font-size: 2.5rem; margin-bottom: 15px; }
+.line { width: 100px; height: 4px; background: var(--primary); margin-bottom: 50px; }
 
-/* REGULAMIN */
-.rules-section { padding: 150px 10%; }
-.section-title { font-family: 'Syncopate'; font-size: 2.5rem; margin-bottom: 60px; text-align: center; }
+.rules-list { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
+.rule-card { border-left: 2px solid var(--primary); padding-left: 25px; }
+.rule-card h4 { margin-bottom: 15px; color: #fff; letter-spacing: 2px; }
+.rule-card p { color: #666; font-size: 0.9rem; }
 
-.rule-line {
-    display: flex;
-    align-items: flex-start;
-    padding: 40px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.num { font-family: 'Syncopate'; color: var(--primary); margin-right: 50px; font-size: 1.5rem; }
-.rule-txt h4 { font-family: 'Syncopate'; margin-bottom: 10px; }
-
-/* PRZYCISKI */
-.cta-primary {
-    background: var(--primary);
-    padding: 18px 45px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    display: inline-block;
-    margin-right: 20px;
-    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
-}
+footer { padding: 50px; text-align: center; font-size: 0.7rem; opacity: 0.3; letter-spacing: 2px; }
 
 @media (max-width: 900px) {
-    .info-grid { grid-template-columns: 1fr; }
-    .hero-v2 { padding: 0 5%; text-align: center; }
+    .grid-container, .rules-list { grid-template-columns: 1fr; }
+    .bento-item.big { grid-column: span 1; }
 }
