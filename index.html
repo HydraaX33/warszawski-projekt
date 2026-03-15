@@ -4,98 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warszawski Projekt | Roleplay</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav>
         <div class="logo">WARSZAWSKI<span>PROJEKT</span></div>
-        <ul class="nav-links">
+        <ul>
             <li><a href="#home">Start</a></li>
-            <li><a href="#about">O Projekcie</a></li>
-            <li><a href="#rules">Zasady</a></li>
-            <li><a href="#commands">Komendy</a></li>
+            <li><a href="#about">O nas</a></li>
+            <li><a href="#rules">Regulamin</a></li>
+            <li><a href="https://discord.gg/twojlink" class="btn-discord">Discord</a></li>
         </ul>
-        <a href="https://discord.gg/TWÓJ_LINK" class="btn-discord">DOŁĄCZ NA DISCORD</a>
     </nav>
 
-    <header id="home" class="hero-section">
-        <div class="hero-content">
-            <h1 class="glitch" data-text="WARSZAWA">WARSZAWA</h1>
-            <p class="subtitle">TWOJE NOWE ŻYCIE W STOLICY</p>
+    <header id="home" class="hero">
+        <div class="hero-inner" data-aos="zoom-in" data-aos-duration="1500">
+            <h1 class="glitch">WARSZAWA</h1>
+            <p>TWOJA HISTORIA ZACZYNA SIĘ TUTAJ</p>
             <div class="hero-btns">
-                <a href="fivem://connect/IP_SERWERA" class="btn-main">ZAGRAJ TERAZ</a>
-                <a href="#about" class="btn-sub">POZNAJ NAS</a>
+                <a href="fivem://connect/IP" class="btn-play">GRAJ TERAZ</a>
+                <a href="#about" class="btn-more">POZNAJ PROJEKT</a>
             </div>
         </div>
     </header>
 
-    <section id="stats" class="stats-bar">
-        <div class="stat">
-            <h2 id="player-count">0</h2>
-            <p>GRACZY ONLINE</p>
-        </div>
-        <div class="stat">
-            <h2>WL-OFF</h2>
-            <p>REKRUTACJA OTWARTA</p>
-        </div>
-        <div class="stat">
-            <h2>24/7</h2>
-            <p>STABILNY HOSTING</p>
+    <section id="about" class="section-padding">
+        <div class="container" data-aos="fade-up">
+            <span class="prefix">O SERWERZE</span>
+            <h2>DLACZEGO WARSZAWSKI PROJEKT?</h2>
+            <p class="description">Jesteśmy pasjonatami, którzy przenieśli klimat polskiej stolicy do świata FiveM. U nas nie jesteś tylko ID – jesteś częścią żyjącego miasta.</p>
         </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="rules" class="section-padding darker">
         <div class="container">
-            <span class="tag">O NAS</span>
-            <h2>DLACZEGO MY?</h2>
-            <div class="features">
-                <div class="feature-card">
-                    <div class="icon">🏙️</div>
-                    <h3>Klimat Warszawy</h3>
-                    <p>Polskie radiowozy, polskie napisy i unikalne lokacje prosto ze stolicy.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">💼</div>
-                    <h3>Rozbudowana Ekonomia</h3>
-                    <p>Wybierz legalną ścieżkę kariery lub stań po ciemnej stronie mocy.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="rules" class="section dark-bg">
-        <div class="container">
-            <span class="tag">ZASADY</span>
-            <h2>REGULAMIN SERWERA</h2>
+            <span class="prefix" data-aos="fade-right">ZASADY</span>
+            <h2 data-aos="fade-right">REGULAMIN</h2>
             <div class="rules-grid">
-                <div class="rule-item"><span>01</span> Poszanowanie życia postaci (RealRP)</div>
-                <div class="rule-item"><span>02</span> Zakaz używania cheatów i modyfikacji</div>
-                <div class="rule-item"><span>03</span> Zakaz MetaGamingu i PowerGamingu</div>
-                <div class="rule-item"><span>04</span> Wymagany sprawny mikrofon i mutacja/RP</div>
+                <div class="rule-card" data-aos="flip-left" data-aos-delay="100">
+                    <h3>01</h3>
+                    <p>Szanuj życie swojej postaci ponad wszystko.</p>
+                </div>
+                <div class="rule-card" data-aos="flip-left" data-aos-delay="300">
+                    <h3>02</h3>
+                    <p>Zakaz korzystania z informacji OOC w grze.</p>
+                </div>
+                <div class="rule-card" data-aos="flip-left" data-aos-delay="500">
+                    <h3>03</h3>
+                    <p>Wymagany sprawny mikrofon i kultura osobista.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="commands" class="section">
-        <div class="container">
-            <span class="tag">POMOC</span>
-            <h2>KOMENDY RP</h2>
-            <table class="cmd-table">
-                <tr><th>Komenda</th><th>Opis</th></tr>
-                <tr><td>/me</td><td>Opis czynności wykonywanej przez postać</td></tr>
-                <tr><td>/do</td><td>Opis otoczenia lub stanu postaci</td></tr>
-                <tr><td>/med</td><td>Opis stanu zdrowia podczas akcji medycznej</td></tr>
-                <tr><td>/try</td><td>Próba wykonania czynności (losowa)</td></tr>
-            </table>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 WARSZAWSKI PROJEKT. DESIGNED FOR THE BEST RP.</p>
-    </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
