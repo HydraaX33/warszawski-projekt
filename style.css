@@ -1,0 +1,67 @@
+:root {
+    --primary: #e63946; /* Czerwień warszawska */
+    --dark: #0f0f0f;
+    --light: #f1f1f1;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; }
+.logo span { color: var(--primary); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin: 0 15px; }
+nav ul li a { text-decoration: none; color: white; transition: 0.3s; }
+nav ul li a:hover { color: var(--primary); }
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1595101783582-7f9496660144?q=80&w=2000'); /* Tło Warszawy */
+    background-size: cover;
+}
+
+.highlight { color: var(--primary); text-shadow: 0 0 10px rgba(230, 57, 70, 0.5); }
+
+.btn-play {
+    background: var(--primary);
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#stats {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    background: #1a1a1a;
+}
+
+.stat-card {
+    margin: 0 30px;
+    text-align: center;
+}
