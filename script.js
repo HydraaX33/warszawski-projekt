@@ -1,4 +1,3 @@
-// Płynne przewijanie do sekcji
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -10,16 +9,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
-});
-
-// Efekt pojawiania się menu przy skrolowaniu
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.style.padding = '15px 8%';
-        nav.style.background = 'rgba(0,0,0,0.95)';
-    } else {
-        nav.style.padding = '20px 8%';
-        nav.style.background = 'rgba(0,0,0,0.9)';
-    }
 });
