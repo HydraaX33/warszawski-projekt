@@ -3,90 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WARSZAWSKI PROJEKT | PREMIUM RP</title>
+    <title>WARSZAWSKI PROJEKT | PRO RP</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <div class="video-bg"></div>
+
     <nav>
-        <div class="logo">WP<span>RP</span></div>
-        <div class="nav-tabs">
-            <a href="#home">START</a>
-            <a href="#factions">FRAKCJE</a>
-            <a href="#pricing">CENNIK</a>
-            <a href="#rules">REGULAMIN</a>
-            <a href="https://discord.gg/twojlink" class="btn-discord">DISCORD</a>
+        <div class="logo">WARSZAWSKI<span>PROJEKT</span></div>
+        <div class="nav-right">
+            <a href="https://discord.com/api/oauth2/authorize?client_id=1482317906946560151&redirect_uri=https%3A%2F%2Fhydraax33.github.io%2Fwarszawski-projekt%2F&response_type=token&scope=identify" id="login-btn" class="dc-btn">ZALOGUJ PRZEZ DC</a>
+            
+            <div id="user-info" class="user-pill hidden">
+                <img id="user-avatar" src="" alt="">
+                <span id="user-name"></span>
+            </div>
         </div>
     </nav>
 
-    <header id="home">
-        <div class="hero-content">
-            <h2 class="sub-title">OFFICIAL FIVE-M SERVER</h2>
-            <h1>WARSZAWSKI<br><span class="glitch">PROJEKT</span></h1>
-            <p>Poczuj unikalny klimat polskiej stolicy. Profesjonalna administracja i najwyższy poziom Roleplay.</p>
-            <div class="hero-btns">
-                <a href="fivem://connect/TWOJE_IP" class="btn-main">ZAGRAJ TERAZ</a>
-            </div>
+    <header>
+        <div class="hero">
+            <h1 class="glitch">STOLICA<span>RP</span></h1>
+            <p>Zaloguj się przez Discord, aby odblokować sklep i kupować usługi.</p>
         </div>
     </header>
 
-    <section id="factions" class="content-section">
+    <section id="shop" class="shop-grid">
         <div class="glass-card">
-            <span class="section-tag">01. JEDNOSTKI</span>
-            <h2>FRAKCJE MIEJSKIE</h2>
-            <div class="factions-grid">
-                <div class="faction-card">
-                    <div class="faction-icon blue">LSPD</div>
-                    <h4>POLICJA</h4>
-                    <p>Dbaj o porządek na ulicach Warszawy w szeregach LSPD.</p>
-                </div>
-                <div class="faction-card">
-                    <div class="faction-icon red">EMS</div>
-                    <h4>MEDYCY</h4>
-                    <p>Niosą pomoc medyczną każdemu mieszkańcowi stolicy.</p>
-                </div>
-                <div class="faction-card">
-                    <div class="faction-icon orange">LSFD</div>
-                    <h4>STRAŻ</h4>
-                    <p>Zabezpieczanie wypadków i profesjonalne akcje ratownicze.</p>
-                </div>
+            <h2>CENNIK PREMIUM</h2>
+            <div class="items">
+                <div class="item"><span>3 POSTAĆ</span> <b>15 ZŁ</b> <button onclick="buy('3 POSTAĆ')" class="buy-btn disabled">KUP</button></div>
+                <div class="item"><span>UNBAN PERM</span> <b>90 ZŁ</b> <button onclick="buy('UNBAN PERM')" class="buy-btn disabled">KUP</button></div>
+                <div class="item"><span>LIMITKA</span> <b>60 ZŁ</b> <button onclick="buy('LIMITKA')" class="buy-btn disabled">KUP</button></div>
+                <div class="item"><span>CUSTOM PED</span> <b>29 ZŁ</b> <button onclick="buy('CUSTOM PED')" class="buy-btn disabled">KUP</button></div>
             </div>
+            <p id="shop-msg">Zaloguj się, aby odblokować płatności.</p>
         </div>
     </section>
-
-    <section id="pricing" class="content-section darker">
-        <div class="glass-card">
-            <span class="section-tag">02. SKLEP</span>
-            <h2>CENNIK</h2>
-            <div class="price-list">
-                <div class="price-item"><span>3 POSTAĆ</span> <span>15 ZŁ</span></div>
-                <div class="price-item"><span>UNBAN (1-3 DNI)</span> <span>10 ZŁ</span></div>
-                <div class="price-item"><span>UNBAN (4-7 DNI)</span> <span>25 ZŁ</span></div>
-                <div class="price-item"><span>UNBAN (7-14 DNI)</span> <span>45 ZŁ</span></div>
-                <div class="price-item"><span>UNBAN (PERM)</span> <span>90 ZŁ</span></div>
-                <div class="price-item"><span>LIMITKA</span> <span>60 ZŁ</span></div>
-                <div class="price-item"><span>TRIAL-SUPPORT</span> <span>45 ZŁ</span></div>
-                <div class="price-item"><span>CUSTOM PED</span> <span>29 ZŁ</span></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="rules" class="content-section">
-        <div class="glass-card">
-            <span class="section-tag">03. KODEKS</span>
-            <h2>ZASADY MIASTA</h2>
-            <div class="rules-container">
-                <div class="rule-item"><h4>IMMERSJA</h4><p>Szanuj życie postaci i reaguj realistycznie.</p></div>
-                <div class="rule-item"><h4>FAIR PLAY</h4><p>Zakaz RDM, VDM oraz MetaGamingu.</p></div>
-                <div class="rule-item"><h4>MIKROFON</h4><p>Wymagany sprawny sprzęt i brak pisków.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 WARSZAWSKI PROJEKT. WSZYSTKIE PRAWA ZASTRZEŻONE.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
